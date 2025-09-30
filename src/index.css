@@ -2,35 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Portfolio Design System - Soft Pastel Palette */
+/* Portfolio Design System - Professional Ocean Palette */
 
 @layer base {
   :root {
     /* Main Brand Colors */
-    --background: 0 0% 98%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 105 55% 96%;
+    --foreground: 215 50% 23%;
     
     /* Portfolio Palette */
-    --thistle: 278 35% 78%;
-    --fairy-tale: 337 100% 89%;
-    --carnation-pink: 338 100% 84%;
-    --uranian-blue: 208 97% 87%;
-    --light-sky-blue: 209 100% 82%;
+    --red-pantone: 355 78% 56%;
+    --honeydew: 105 55% 96%;
+    --non-photo-blue: 182 43% 76%;
+    --cerulean: 203 39% 44%;
+    --berkeley-blue: 215 50% 23%;
     
     /* Gradient Definitions */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--thistle)), hsl(var(--fairy-tale)));
-    --gradient-card: linear-gradient(145deg, hsl(var(--uranian-blue)), hsl(var(--light-sky-blue)));
-    --gradient-accent: linear-gradient(90deg, hsl(var(--carnation-pink)), hsl(var(--fairy-tale)));
-    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--thistle) / 0.1));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--cerulean)), hsl(var(--red-pantone)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--non-photo-blue)), hsl(var(--cerulean)));
+    --gradient-accent: linear-gradient(90deg, hsl(var(--red-pantone)), hsl(var(--cerulean)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--non-photo-blue) / 0.1));
     
     /* Glass Effects */
-    --glass-bg: hsl(var(--background) / 0.8);
-    --glass-border: hsl(var(--thistle) / 0.2);
+    --glass-bg: hsl(var(--background) / 0.85);
+    --glass-border: hsl(var(--non-photo-blue) / 0.3);
     
     /* Shadows */
-    --shadow-soft: 0 8px 32px hsl(var(--thistle) / 0.15);
-    --shadow-glow: 0 0 40px hsl(var(--carnation-pink) / 0.3);
-    --shadow-card: 0 10px 30px hsl(var(--uranian-blue) / 0.2);
+    --shadow-soft: 0 8px 32px hsl(var(--cerulean) / 0.15);
+    --shadow-glow: 0 0 40px hsl(var(--red-pantone) / 0.3);
+    --shadow-card: 0 10px 30px hsl(var(--non-photo-blue) / 0.2);
     
     /* Animation Variables */
     --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -38,22 +38,22 @@
 
     /* Semantic Token Mapping */
     --card: var(--glass-bg);
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 215 50% 23%;
 
     --popover: var(--glass-bg);
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 215 50% 23%;
 
-    --primary: var(--thistle);
-    --primary-foreground: 222.2 84% 4.9%;
+    --primary: var(--cerulean);
+    --primary-foreground: 105 55% 96%;
 
-    --secondary: var(--uranian-blue);
-    --secondary-foreground: 222.2 84% 4.9%;
+    --secondary: var(--non-photo-blue);
+    --secondary-foreground: 215 50% 23%;
 
-    --muted: var(--fairy-tale);
-    --muted-foreground: 222.2 60% 35%;
+    --muted: var(--non-photo-blue);
+    --muted-foreground: 215 35% 40%;
 
-    --accent: var(--carnation-pink);
-    --accent-foreground: 222.2 84% 4.9%;
+    --accent: var(--red-pantone);
+    --accent-foreground: 105 55% 96%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -82,26 +82,26 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 215 50% 23%;
+    --foreground: 105 55% 96%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 215 45% 18%;
+    --card-foreground: 105 55% 96%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 215 45% 18%;
+    --popover-foreground: 105 55% 96%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 355 78% 56%;
+    --primary-foreground: 105 55% 96%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 203 39% 44%;
+    --secondary-foreground: 105 55% 96%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 203 30% 35%;
+    --muted-foreground: 182 25% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 355 78% 56%;
+    --accent-foreground: 105 55% 96%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;

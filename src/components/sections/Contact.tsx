@@ -113,7 +113,7 @@ const Contact = () => {
                     {contact.href ? (
                       <a 
                         href={contact.href}
-                        className="font-medium text-foreground hover:text-carnation-pink transition-colors"
+                        className="font-medium text-foreground hover:text-red-pantone transition-colors"
                       >
                         {contact.value}
                       </a>
@@ -135,7 +135,7 @@ const Contact = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-3 p-3 glass-card hover-lift hover-glow text-muted-foreground hover:text-carnation-pink transition-colors"
+                    className="flex items-center space-x-3 p-3 glass-card hover-lift hover-glow text-muted-foreground hover:text-red-pantone transition-colors"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <social.icon size={20} />
@@ -164,7 +164,7 @@ const Contact = () => {
                     onChange={handleInputChange}
                     placeholder="Your name"
                     required
-                    className="bg-background/50 border-thistle/30 focus:border-carnation-pink"
+                    className="bg-background/50 border-non-photo-blue/30 focus:border-red-pantone"
                   />
                 </div>
                 <div>
@@ -178,7 +178,7 @@ const Contact = () => {
                     onChange={handleInputChange}
                     placeholder="your.email@example.com"
                     required
-                    className="bg-background/50 border-thistle/30 focus:border-carnation-pink"
+                    className="bg-background/50 border-non-photo-blue/30 focus:border-red-pantone"
                   />
                 </div>
               </div>
@@ -192,7 +192,7 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleInputChange}
                   placeholder="What's this about?"
-                  className="bg-background/50 border-thistle/30 focus:border-carnation-pink"
+                  className="bg-background/50 border-non-photo-blue/30 focus:border-red-pantone"
                 />
               </div>
 
@@ -207,14 +207,14 @@ const Contact = () => {
                   placeholder="Tell me about your project or just say hello!"
                   rows={6}
                   required
-                  className="bg-background/50 border-thistle/30 focus:border-carnation-pink resize-none"
+                  className="bg-background/50 border-non-photo-blue/30 focus:border-red-pantone resize-none"
                 />
               </div>
 
               <Button 
                 type="submit" 
                 size="lg" 
-                className="w-full gradient-accent text-foreground font-semibold hover-lift"
+                className="w-full gradient-accent text-accent-foreground font-semibold hover-lift"
               >
                 <Send className="mr-2 h-5 w-5" />
                 Send Message
