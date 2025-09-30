@@ -19,6 +19,13 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        
+        // Portfolio Brand Colors
+        thistle: "hsl(var(--thistle))",
+        "fairy-tale": "hsl(var(--fairy-tale))",
+        "carnation-pink": "hsl(var(--carnation-pink))",
+        "uranian-blue": "hsl(var(--uranian-blue))",
+        "light-sky-blue": "hsl(var(--light-sky-blue))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -84,6 +91,9 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "float": "float 6s ease-in-out infinite",
+        "fade-up": "fadeUp 0.8s ease-out forwards",
+        "bounce-soft": "bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)",
       },
     },
   },

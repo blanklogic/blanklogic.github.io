@@ -2,32 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Portfolio Design System - Soft Pastel Palette */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    /* Main Brand Colors */
+    --background: 0 0% 98%;
     --foreground: 222.2 84% 4.9%;
+    
+    /* Portfolio Palette */
+    --thistle: 278 35% 78%;
+    --fairy-tale: 337 100% 89%;
+    --carnation-pink: 338 100% 84%;
+    --uranian-blue: 208 97% 87%;
+    --light-sky-blue: 209 100% 82%;
+    
+    /* Gradient Definitions */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--thistle)), hsl(var(--fairy-tale)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--uranian-blue)), hsl(var(--light-sky-blue)));
+    --gradient-accent: linear-gradient(90deg, hsl(var(--carnation-pink)), hsl(var(--fairy-tale)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--thistle) / 0.1));
+    
+    /* Glass Effects */
+    --glass-bg: hsl(var(--background) / 0.8);
+    --glass-border: hsl(var(--thistle) / 0.2);
+    
+    /* Shadows */
+    --shadow-soft: 0 8px 32px hsl(var(--thistle) / 0.15);
+    --shadow-glow: 0 0 40px hsl(var(--carnation-pink) / 0.3);
+    --shadow-card: 0 10px 30px hsl(var(--uranian-blue) / 0.2);
+    
+    /* Animation Variables */
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    --card: 0 0% 100%;
+    /* Semantic Token Mapping */
+    --card: var(--glass-bg);
     --card-foreground: 222.2 84% 4.9%;
 
-    --popover: 0 0% 100%;
+    --popover: var(--glass-bg);
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: var(--thistle);
+    --primary-foreground: 222.2 84% 4.9%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: var(--uranian-blue);
+    --secondary-foreground: 222.2 84% 4.9%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: var(--fairy-tale);
+    --muted-foreground: 222.2 60% 35%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: var(--carnation-pink);
+    --accent-foreground: 222.2 84% 4.9%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -101,5 +127,72 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    background: var(--gradient-subtle);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Portfolio-specific utilities */
+@layer utilities {
+  .glass-card {
+    @apply backdrop-blur-md border border-[var(--glass-border)];
+    background: var(--glass-bg);
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background: var(--gradient-accent);
+  }
+  
+  .hover-lift {
+    @apply transition-all duration-300 hover:scale-105 hover:-translate-y-2;
+    transition: var(--transition-smooth);
+  }
+  
+  .hover-glow {
+    transition: var(--transition-smooth);
+  }
+  
+  .hover-glow:hover {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-fade-up {
+    animation: fadeUp 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
