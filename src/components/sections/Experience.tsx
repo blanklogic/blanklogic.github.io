@@ -66,10 +66,10 @@ const Experience = () => {
 
   const getTypeColor = (type: string) => {
     switch (type) {
-      case 'work': return 'carnation-pink';
-      case 'leadership': return 'uranian-blue';
-      case 'education': return 'thistle';
-      default: return 'light-sky-blue';
+      case 'work': return 'red-pantone';
+      case 'leadership': return 'cerulean';
+      case 'education': return 'berkeley-blue';
+      default: return 'non-photo-blue';
     }
   };
 
@@ -89,7 +89,7 @@ const Experience = () => {
         {/* Timeline */}
         <div className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-thistle via-carnation-pink to-uranian-blue opacity-30"></div>
+          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-berkeley-blue via-red-pantone to-cerulean opacity-30"></div>
 
           <div className="space-y-12">
             {experiences.map((exp, index) => (
