@@ -93,10 +93,10 @@ const Projects = () => {
                   </div>
                 </div>
                 <div className="flex space-x-2">
-                  <Button variant="ghost" size="icon" className="hover:text-red-pantone">
+                  <Button variant="ghost" size="icon" className="hover:text-carnation-pink">
                     <Github size={20} />
                   </Button>
-                  <Button variant="ghost" size="icon" className="hover:text-red-pantone">
+                  <Button variant="ghost" size="icon" className="hover:text-carnation-pink">
                     <ExternalLink size={20} />
                   </Button>
                 </div>
@@ -113,7 +113,7 @@ const Projects = () => {
                 <ul className="space-y-2">
                   {project.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start space-x-2 text-sm text-muted-foreground">
-                      <div className="w-1.5 h-1.5 rounded-full bg-red-pantone mt-2 flex-shrink-0"></div>
+                      <div className="w-1.5 h-1.5 rounded-full bg-carnation-pink mt-2 flex-shrink-0"></div>
                       <span>{feature}</span>
                     </li>
                   ))}

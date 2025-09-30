@@ -35,12 +35,12 @@ const Skills = () => {
   ];
 
   const technologies = [
-    { name: "React Native", level: 95, color: "red-pantone" },
-    { name: "JavaScript/TypeScript", level: 90, color: "cerulean" },
-    { name: "Java", level: 88, color: "non-photo-blue" },
-    { name: "Python", level: 85, color: "berkeley-blue" },
-    { name: "Next.js", level: 82, color: "red-pantone" },
-    { name: "TailwindCSS", level: 90, color: "cerulean" }
+    { name: "React Native", level: 95, color: "carnation-pink" },
+    { name: "JavaScript/TypeScript", level: 90, color: "uranian-blue" },
+    { name: "Java", level: 88, color: "thistle" },
+    { name: "Python", level: 85, color: "light-sky-blue" },
+    { name: "Next.js", level: 82, color: "fairy-tale" },
+    { name: "TailwindCSS", level: 90, color: "carnation-pink" }
   ];
 
   return (

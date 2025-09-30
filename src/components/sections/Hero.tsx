@@ -35,7 +35,7 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="hover-lift gradient-accent text-accent-foreground font-semibold">
+              <Button size="lg" className="hover-lift gradient-accent text-foreground font-semibold">
                 <Mail className="mr-2 h-5 w-5" />
                 Get In Touch
               </Button>
@@ -50,7 +50,7 @@ const Hero = () => {
                 href="https://github.com/blanklogic" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-red-pantone transition-colors hover-lift"
+                className="text-muted-foreground hover:text-carnation-pink transition-colors hover-lift"
               >
                 <Github size={24} />
               </a>
@@ -58,13 +58,13 @@ const Hero = () => {
                 href="https://linkedin.com/in/jaymesonkoh" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-red-pantone transition-colors hover-lift"
+                className="text-muted-foreground hover:text-carnation-pink transition-colors hover-lift"
               >
                 <Linkedin size={24} />
               </a>
               <a 
                 href="mailto:tellmindblank@gmail.com"
-                className="text-muted-foreground hover:text-red-pantone transition-colors hover-lift"
+                className="text-muted-foreground hover:text-carnation-pink transition-colors hover-lift"
               >
                 <Mail size={24} />
               </a>
@@ -91,7 +91,7 @@ const Hero = () => {
         <div className="flex justify-center mt-16 animate-fade-up" style={{ animationDelay: '0.5s' }}>
           <button 
             onClick={scrollToAbout}
-            className="animate-bounce text-muted-foreground hover:text-red-pantone transition-colors"
+            className="animate-bounce text-muted-foreground hover:text-carnation-pink transition-colors"
           >
             <ArrowDown size={32} />
           </button>
