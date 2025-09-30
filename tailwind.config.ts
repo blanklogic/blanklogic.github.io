@@ -20,12 +20,12 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         
-        // Professional Brand Colors
-        "red-pantone": "hsl(var(--red-pantone))",
-        "honeydew": "hsl(var(--honeydew))",
-        "non-photo-blue": "hsl(var(--non-photo-blue))",
-        "cerulean": "hsl(var(--cerulean))",
-        "berkeley-blue": "hsl(var(--berkeley-blue))",
+        // Portfolio Brand Colors
+        thistle: "hsl(var(--thistle))",
+        "fairy-tale": "hsl(var(--fairy-tale))",
+        "carnation-pink": "hsl(var(--carnation-pink))",
+        "uranian-blue": "hsl(var(--uranian-blue))",
+        "light-sky-blue": "hsl(var(--light-sky-blue))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
