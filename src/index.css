@@ -160,7 +160,7 @@
         background-attachment: fixed;
         min-height: 100vh;
         animation: gentleLeafFloat 20s ease-in-out infinite;
-        cursor: url('assets/Cursor_Working.ani'), auto;
+        cursor: url('src/assets/gloveCursor.png'), auto;
     }
 
     html {
