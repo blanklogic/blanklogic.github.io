@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { Button } from './button';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,7 +22,7 @@ const Navigation = () => {
     { href: '#contact', label: 'Contact' },
   ];
 
-  const scrollToSection = (href: string) => {
+  const scrollToSection = (href) => {
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -37,8 +36,14 @@ const Navigation = () => {
     }`}>
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold text-gradient">
-            Jaymeson Koh
+          <div className="text-2xl font-bold text-primary-dark">
+            <button
+              key="home"
+              onClick={() => scrollToSection('home')}
+              className="text-foreground-dark hover:text-[hsl(var(--uranian-blue))] transition-colors font-bold"
+            >
+              blanklogic
+            </button>
           </div>
 
           {/* Desktop Navigation */}
@@ -47,7 +52,7 @@ const Navigation = () => {
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="text-foreground hover:text-carnation-pink transition-colors font-medium"
+                className="text-foreground hover:text-[hsl(var(--uranian-blue))] transition-colors font-medium"
               >
                 {item.label}
               </button>
@@ -55,14 +60,12 @@ const Navigation = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
+          <button
+            className="md:hidden p-2 rounded-lg glass-card"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </Button>
+          </button>
         </div>
 
         {/* Mobile Navigation */}
@@ -72,7 +75,7 @@ const Navigation = () => {
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left px-6 py-3 text-foreground hover:text-carnation-pink transition-colors font-medium"
+                className="block w-full text-left px-6 py-3 text-foreground hover:text-[hsl(var(--uranian-blue))] transition-colors font-medium"
               >
                 {item.label}
               </button>
