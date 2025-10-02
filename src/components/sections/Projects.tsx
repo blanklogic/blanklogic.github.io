@@ -40,6 +40,8 @@ const Projects = () => {
       category: "web",
       featured: true,
       metrics: { team: "6 developers", methodology: "Agile" },
+      github: "https://github.com/blanklogic",
+      url: "https://github.com/blanklogic",
     },
     {
       id: 2,
@@ -59,6 +61,8 @@ const Projects = () => {
       category: "desktop",
       featured: true,
       metrics: { team: "5 developers", role: "Team Lead" },
+      github: "https://github.com/AY2425S1-CS2103T-T09-1/tp",
+      url: "https://ay2425s1-cs2103t-t09-1.github.io/tp",
     },
     {
       id: 3,
@@ -74,10 +78,12 @@ const Projects = () => {
       ],
       icon: Smartphone,
       color: "carnation-pink",
-      period: "Personal Project - 2024",
+      period: "Independent Software Development Project - 2024",
       category: "mobile",
       featured: true,
-      metrics: { platform: "iOS/Android", type: "Personal Project" },
+      metrics: { platform: "iOS/Android", type: "Pair Project" },
+      github: "https://github.com/blanklogic",
+      url: "https://blanklogic.github.io/Finnovations",
     },
     {
       id: 4,
@@ -97,6 +103,8 @@ const Projects = () => {
       category: "ai",
       featured: false,
       metrics: { performance: "High", course: "AI/ML" },
+      github: "https://github.com/blanklogic",
+      url: "https://github.com/blanklogic",
     },
   ];
 
@@ -191,12 +199,22 @@ const Projects = () => {
                   </div>
                 </div>
                 <div className="flex space-x-2">
-                  <button className="p-2 glass-card rounded-lg text-muted-foreground hover:text-[hsl(var(--uranian-blue))] hover:scale-110 transition-all">
+                  <a
+                    className="p-2 glass-card rounded-lg text-muted-foreground hover:text-[hsl(var(--uranian-blue))] hover:scale-110 transition-all"
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Github size={20} />
-                  </button>
-                  <button className="p-2 glass-card rounded-lg text-muted-foreground hover:text-[hsl(var(--uranian-blue))] hover:scale-110 transition-all">
+                  </a>
+                  <a
+                    className="p-2 glass-card rounded-lg text-muted-foreground hover:text-[hsl(var(--uranian-blue))] hover:scale-110 transition-all"
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <ExternalLink size={20} />
-                  </button>
+                  </a>
                 </div>
               </div>
 
