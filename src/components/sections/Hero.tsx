@@ -98,7 +98,7 @@ const Hero = () => {
   }, [floatingEmojis.length]);
 
   return (
-    <section className="min-h-screen flex items-center justify-center pt-20 pb-10 relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center pt-24 pb-10 relative overflow-hidden">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div
           className="absolute top-20 right-20 w-96 h-96 bg-[hsl(var(--uranian-blue))] rounded-full opacity-10 blur-3xl animate-float"
@@ -143,7 +143,7 @@ const Hero = () => {
                 size={16}
                 className="text-[hsl(var(--maple-blue))] group-hover:animate-spin maple-leaf"
               />
-              <span className="text-sm font-bold text-gray-800">
+              <span className="text-sm font-bold text-foreground">
                 🏛️ Currently in Toronto Guild • 🎓 NUS Overseas Colleges
               </span>
               <div className="w-2 h-2 bg-[hsl(var(--maple-green))] rounded-full animate-pulse"></div>
@@ -151,7 +151,7 @@ const Hero = () => {
 
             <div className="space-y-4">
               <div className="flex items-center space-x-2">
-                <span className="text-lg text-gray-700 font-medium">
+                <span className="text-lg text-foreground font-medium">
                   🎮 Player Name:
                 </span>
                 <div className="exp-bar h-2 w-24 rounded-full"></div>
@@ -160,7 +160,7 @@ const Hero = () => {
                 🍁 Jaymeson Koh
               </h1>
               <div className="h-16 flex items-center space-x-3">
-                <span className="text-sm text-gray-700">Class:</span>
+                <span className="text-sm text-foreground">Class:</span>
                 <h2 className="text-2xl lg:text-3xl font-bold text-[hsl(var(--maple-blue))] font-mono">
                   {typedText}
                   <span className="animate-pulse text-[hsl(var(--maple-orange))]">
@@ -170,14 +170,14 @@ const Hero = () => {
               </div>
               <div className="flex items-center space-x-4 text-sm">
                 <div className="flex items-center space-x-1">
-                  <span className="text-gray-600">Origin:</span>
-                  <span className="font-semibold text-gray-800">
+                  <span className="text-foreground">Origin:</span>
+                  <span className="font-semibold text-foreground">
                     🇸🇬 Victoria Island (Singapore)
                   </span>
                 </div>
                 <div className="flex items-center space-x-1">
-                  <span className="text-gray-600">Current Map:</span>
-                  <span className="font-semibold text-gray-800">
+                  <span className="text-foreground">Current Map:</span>
+                  <span className="font-semibold text-foreground">
                     🇨🇦 Maple World (Toronto)
                   </span>
                 </div>
@@ -189,9 +189,9 @@ const Hero = () => {
                 <span className="text-sm font-bold text-[hsl(var(--maple-red))]">
                   📜 Quest Log:
                 </span>
-                <div className="text-xs text-gray-600">Active Adventure</div>
+                <div className="text-xs text-muted-foreground">Active Adventure</div>
               </div>
-              <p className="text-base text-gray-800 leading-relaxed">
+              <p className="text-base text-foreground leading-relaxed">
                 A brave <strong className="text-blue-700">Code Warrior</strong>{" "}
                 from the mystical lands of Singapore 🏝️, currently exploring the
                 northern territories of Toronto 🗺️ through the legendary
@@ -206,7 +206,7 @@ const Hero = () => {
               </p>
               <div className="mt-3 flex items-center space-x-2">
                 <div className="w-2 h-2 bg-[hsl(var(--maple-green))] rounded-full animate-pulse"></div>
-                <span className="text-xs text-gray-600">
+                <span className="text-xs text-muted-foreground">
                   Currently employed at Monark Guild
                 </span>
               </div>

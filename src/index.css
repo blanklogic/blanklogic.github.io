@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Portfolio Design System - Soft Pastel Palette */
+/* Portfolio Design System - MapleStory Inspired */
 
 @layer base {
     :root {
@@ -44,14 +44,14 @@
         --highlight-bg: var(--carnation-pink);
 
         /* Glass Effects */
-        --glass-bg: hsl(var(--background) / 0.85);
-        --glass-border: hsl(var(--uranian-blue) / 0.3);
+        --glass-bg: rgba(255, 255, 255, 0.9);
+        --glass-border: hsl(var(--maple-blue) / 0.4);
 
         /* Shadows */
-        --shadow-soft: 0 8px 32px hsl(208 70% 50% / 0.15);
-        --shadow-glow: 0 0 40px hsl(209 80% 60% / 0.25);
-        --shadow-card: 0 10px 30px hsl(278 35% 50% / 0.18);
-        --shadow-hover: 0 20px 60px hsl(208 70% 50% / 0.3);
+        --shadow-soft: 0 8px 32px rgba(0, 0, 0, 0.1);
+        --shadow-glow: 0 0 40px hsl(var(--skill-glow) / 0.3);
+        --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.15);
+        --shadow-hover: 0 20px 60px hsl(var(--maple-blue) / 0.3);
 
         /* Animation Variables */
         --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -60,22 +60,22 @@
 
         /* Semantic Token Mapping */
         --card: var(--glass-bg);
-        --card-foreground: 220 15% 25%;
+        --card-foreground: 220 30% 15%;
 
         --popover: var(--glass-bg);
-        --popover-foreground: 220 15% 25%;
+        --popover-foreground: 220 30% 15%;
 
         --primary: var(--uranian-blue);
-        --primary-foreground: 220 15% 25%;
+        --primary-foreground: 220 30% 15%;
 
         --secondary: var(--light-sky-blue);
-        --secondary-foreground: 220 15% 25%;
+        --secondary-foreground: 220 30% 15%;
 
         --muted: 208 50% 92%;
         --muted-foreground: 220 15% 40%;
 
         --accent: var(--thistle);
-        --accent-foreground: 220 15% 25%;
+        --accent-foreground: 220 30% 15%;
 
         --destructive: 0 72% 51%;
         --destructive-foreground: 0 0% 98%;
@@ -83,55 +83,68 @@
         --border: 214.3 31.8% 91.4%;
         --input: 214.3 31.8% 91.4%;
         --ring: 208 70% 50%;
-
         --radius: 0.5rem;
-
-        --sidebar-background: 0 0% 98%;
-        --sidebar-foreground: 220 15% 25%;
-        --sidebar-primary: 220 15% 25%;
-        --sidebar-primary-foreground: 0 0% 98%;
-        --sidebar-accent: 240 4.8% 95.9%;
-        --sidebar-accent-foreground: 220 15% 25%;
-        --sidebar-border: 220 13% 91%;
-        --sidebar-ring: 208 70% 50%;
     }
 
     .dark {
-        --background: 222.2 84% 4.9%;
-        --foreground: 210 40% 98%;
+        /* Dark MapleStory Theme - Cozy Night Mode */
+        --background: 220 25% 10%;
+        --foreground: 210 30% 85%;
 
-        --card: 222.2 84% 4.9%;
-        --card-foreground: 210 40% 98%;
+        /* Adjusted MapleStory Colors for Dark Mode */
+        --maple-red: 0 75% 65%;
+        --maple-orange: 30 90% 70%;
+        --maple-yellow: 50 95% 75%;
+        --maple-green: 120 60% 60%;
+        --maple-blue: 210 80% 70%;
+        --maple-purple: 270 65% 70%;
 
-        --popover: 222.2 84% 4.9%;
-        --popover-foreground: 210 40% 98%;
+        /* Dark RPG UI Colors */
+        --exp-bar: 45 95% 65%;
+        --hp-bar: 0 70% 55%;
+        --mp-bar: 240 80% 65%;
+        --skill-glow: 60 95% 75%;
 
-        --primary: 210 40% 98%;
-        --primary-foreground: 222.2 47.4% 11.2%;
+        /* Legacy mappings adjusted */
+        --thistle: 270 65% 70%;
+        --fairy-tale: 0 75% 70%;
+        --carnation-pink: 320 75% 75%;
+        --uranian-blue: 210 80% 70%;
+        --light-sky-blue: 200 85% 75%;
 
-        --secondary: 217.2 32.6% 17.5%;
-        --secondary-foreground: 210 40% 98%;
+        --thistle-dark: 270 70% 75%;
+        --carnation-dark: 320 70% 75%;
+        --uranian-dark: 210 80% 75%;
+        --sky-dark: 200 85% 80%;
 
-        --muted: 217.2 32.6% 17.5%;
-        --muted-foreground: 215 20.2% 65.1%;
+        /* Dark Glass Effects */
+        --glass-bg: rgba(30, 35, 45, 0.85);
+        --glass-border: hsl(var(--maple-blue) / 0.5);
 
-        --accent: 217.2 32.6% 17.5%;
-        --accent-foreground: 210 40% 98%;
+        /* Dark Shadows with Glow */
+        --shadow-soft: 0 8px 32px rgba(0, 0, 0, 0.5);
+        --shadow-glow: 0 0 40px hsl(var(--skill-glow) / 0.4);
+        --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.6);
+        --shadow-hover: 0 20px 60px hsl(var(--maple-blue) / 0.4);
 
-        --destructive: 0 62.8% 30.6%;
-        --destructive-foreground: 210 40% 98%;
-
-        --border: 217.2 32.6% 17.5%;
-        --input: 217.2 32.6% 17.5%;
-        --ring: 212.7 26.8% 83.9%;
-        --sidebar-background: 240 5.9% 10%;
-        --sidebar-foreground: 240 4.8% 95.9%;
-        --sidebar-primary: 224.3 76.3% 48%;
-        --sidebar-primary-foreground: 0 0% 100%;
-        --sidebar-accent: 240 3.7% 15.9%;
-        --sidebar-accent-foreground: 240 4.8% 95.9%;
-        --sidebar-border: 240 3.7% 15.9%;
-        --sidebar-ring: 217.2 91.2% 59.8%;
+        /* Semantic tokens for dark */
+        --card: var(--glass-bg);
+        --card-foreground: 210 30% 85%;
+        --popover: var(--glass-bg);
+        --popover-foreground: 210 30% 85%;
+        --primary: var(--uranian-blue);
+        --primary-foreground: 210 30% 85%;
+        --secondary: var(--light-sky-blue);
+        --secondary-foreground: 210 30% 85%;
+        --muted: 220 20% 18%;
+        --muted-foreground: 210 20% 65%;
+        --accent: var(--thistle);
+        --accent-foreground: 210 30% 85%;
+        --destructive: 0 70% 55%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 220 20% 25%;
+        --input: 220 20% 18%;
+        --ring: 208 80% 70%;
     }
 }
 
@@ -143,38 +156,33 @@
     body {
         @apply bg-background text-foreground;
         background:
-            url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 20c-5 0-10 3-15 8 5-2 10-2 15-2s10 0 15 2c-5-5-10-8-15-8z M20 35c2-3 5-5 10-5s8 2 10 5c-2 3-5 5-10 5s-8-2-10-5z M15 25c3 2 6 3 10 3 2 0 4-1 5-2-3-2-6-3-10-3-2 0-4 1-5 2z M45 25c-3 2-6 3-10 3-2 0-4-1-5-2 3-2 6-3 10-3 2 0 4 1 5 2z' fill='%23ff6b6b' fill-opacity='0.03'/%3E%3C/svg%3E")
-                0 0,
-            url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 15c-3 0-7 2-10 5 3-1 7-1 10-1s7 0 10 1c-3-3-7-5-10-5z M15 25c1-2 3-3 5-3s4 1 5 3c-1 2-3 3-5 3s-4-1-5-3z' fill='%23ffa500' fill-opacity='0.02'/%3E%3C/svg%3E")
-                20px 20px,
-            linear-gradient(
-                135deg,
-                hsl(var(--background)) 0%,
-                #fef7f0 20%,
-                #fff5f0 40%,
-                #fef8f0 60%,
-                #fff9f3 80%,
-                hsl(var(--background)) 100%
-            );
+            url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 20c-5 0-10 3-15 8 5-2 10-2 15-2s10 0 15 2c-5-5-10-8-15-8z M20 35c2-3 5-5 10-5s8 2 10 5c-2 3-5 5-10 5s-8-2-10-5z M15 25c3 2 6 3 10 3 2 0 4-1 5-2-3-2-6-3-10-3-2 0-4 1-5 2z M45 25c-3 2-6 3-10 3-2 0-4-1-5-2 3-2 6-3 10-3 2 0 4 1 5 2z' fill='%23ff6b6b' fill-opacity='0.03'/%3E%3C/svg%3E") 0 0,
+            url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 15c-3 0-7 2-10 5 3-1 7-1 10-1s7 0 10 1c-3-3-7-5-10-5z M15 25c1-2 3-3 5-3s4 1 5 3c-1 2-3 3-5 3s-4-1-5-3z' fill='%23ffa500' fill-opacity='0.02'/%3E%3C/svg%3E") 20px 20px,
+            linear-gradient(135deg, hsl(var(--background)) 0%, #fef7f0 20%, #fff5f0 40%, #fef8f0 60%, #fff9f3 80%, hsl(var(--background)) 100%);
         font-family: "Courier New", "Monaco", "Menlo", monospace;
         background-attachment: fixed;
         min-height: 100vh;
         animation: gentleLeafFloat 20s ease-in-out infinite;
-        cursor: url('@/assets/gloveCursor.png'), auto;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .dark body {
+        background:
+            url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 20c-5 0-10 3-15 8 5-2 10-2 15-2s10 0 15 2c-5-5-10-8-15-8z M20 35c2-3 5-5 10-5s8 2 10 5c-2 3-5 5-10 5s-8-2-10-5z M15 25c3 2 6 3 10 3 2 0 4-1 5-2-3-2-6-3-10-3-2 0-4 1-5 2z M45 25c-3 2-6 3-10 3-2 0-4-1-5-2 3-2 6-3 10-3 2 0 4 1 5 2z' fill='%234ecdc4' fill-opacity='0.05'/%3E%3C/svg%3E") 0 0,
+            url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 15c-3 0-7 2-10 5 3-1 7-1 10-1s7 0 10 1c-3-3-7-5-10-5z M15 25c1-2 3-3 5-3s4 1 5 3c-1 2-3 3-5 3s-4-1-5-3z' fill='%23dda0dd' fill-opacity='0.04'/%3E%3C/svg%3E") 20px 20px,
+            linear-gradient(135deg, hsl(var(--background)) 0%, #1a1f28 20%, #1c2230 40%, #1e2433 60%, #1a1f28 80%, hsl(var(--background)) 100%);
     }
 
     html {
         scroll-behavior: smooth;
-        /* Hide scrollbar for Chrome, Safari and Opera */
-        scrollbar-width: none; /* Firefox */
-        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none;
+        -ms-overflow-style: none;
     }
 
     html::-webkit-scrollbar {
-        display: none; /* Chrome, Safari, Opera */
+        display: none;
     }
 
-    /* Custom scrollbar for containers (optional) */
     .custom-scrollbar::-webkit-scrollbar {
         width: 6px;
     }
@@ -197,11 +205,7 @@
 @layer utilities {
     .glass-card {
         @apply backdrop-blur-md border-2;
-        background: linear-gradient(
-            145deg,
-            rgba(255, 255, 255, 0.95),
-            rgba(255, 255, 255, 0.85)
-        );
+        background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
         border: 2px solid hsl(var(--maple-blue) / 0.4);
         box-shadow:
             0 8px 32px rgba(0, 0, 0, 0.1),
@@ -211,6 +215,16 @@
         color: hsl(220, 30%, 15%);
     }
 
+    .dark .glass-card {
+        background: linear-gradient(145deg, rgba(30, 35, 45, 0.95), rgba(25, 30, 40, 0.85));
+        border: 2px solid hsl(var(--maple-blue) / 0.5);
+        box-shadow:
+            0 8px 32px rgba(0, 0, 0, 0.5),
+            inset 0 1px 0 rgba(100, 150, 200, 0.2),
+            0 0 20px hsl(var(--skill-glow) / 0.4);
+        color: hsl(210, 30%, 85%);
+    }
+
     .glass-card::before {
         content: "";
         position: absolute;
@@ -218,60 +232,36 @@
         left: 0;
         right: 0;
         height: 2px;
-        background: linear-gradient(
-            90deg,
-            hsl(var(--maple-red)),
-            hsl(var(--maple-orange)),
-            hsl(var(--maple-yellow)),
-            hsl(var(--maple-green)),
-            hsl(var(--maple-blue)),
-            hsl(var(--maple-purple))
-        );
+        background: linear-gradient(90deg, hsl(var(--maple-red)), hsl(var(--maple-orange)), hsl(var(--maple-yellow)), hsl(var(--maple-green)), hsl(var(--maple-blue)), hsl(var(--maple-purple)));
         border-radius: inherit;
     }
-    
+
     .glass-card.rounded-full::before {
         display: none;
     }
 
     .bg-primary-solid {
-        background: linear-gradient(
-            45deg,
-            hsl(var(--maple-blue)),
-            hsl(var(--maple-purple))
-        );
+        background: linear-gradient(45deg, hsl(var(--maple-blue)), hsl(var(--maple-purple)));
     }
 
     .bg-secondary-solid {
-        background: linear-gradient(
-            45deg,
-            hsl(var(--maple-green)),
-            hsl(var(--maple-blue))
-        );
+        background: linear-gradient(45deg, hsl(var(--maple-green)), hsl(var(--maple-blue)));
     }
 
     .bg-accent-solid {
-        background: linear-gradient(
-            45deg,
-            hsl(var(--maple-purple)),
-            hsl(var(--maple-red))
-        );
+        background: linear-gradient(45deg, hsl(var(--maple-purple)), hsl(var(--maple-red)));
     }
 
     .bg-highlight-solid {
-        background: linear-gradient(
-            45deg,
-            hsl(var(--maple-orange)),
-            hsl(var(--maple-yellow))
-        );
+        background: linear-gradient(45deg, hsl(var(--maple-orange)), hsl(var(--maple-yellow)));
     }
 
     .text-primary-dark {
-        color: hsl(220, 30%, 15%);
+        color: hsl(var(--uranian-dark));
     }
 
     .text-accent-dark {
-        color: hsl(270, 60%, 35%);
+        color: hsl(var(--thistle-dark));
     }
 
     .hover-lift {
@@ -307,9 +297,7 @@
     .section-reveal {
         opacity: 0;
         transform: translateY(40px);
-        transition:
-            opacity 0.8s ease-out,
-            transform 0.8s ease-out;
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     }
 
     .section-reveal.visible {
@@ -333,12 +321,7 @@
         left: -100%;
         width: 100%;
         height: 100%;
-        background: linear-gradient(
-            90deg,
-            transparent,
-            rgba(255, 255, 255, 0.3),
-            transparent
-        );
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
         transition: left 0.6s ease;
     }
 
@@ -359,15 +342,7 @@
     }
 
     .rainbow-text {
-        background: linear-gradient(
-            -45deg,
-            #ff6b6b,
-            #4ecdc4,
-            #45b7d1,
-            #96ceb4,
-            #ffeaa7,
-            #dda0dd
-        );
+        background: linear-gradient(-45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7, #dda0dd);
         background-size: 400% 400%;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -434,11 +409,7 @@
     }
 
     .gradient-text {
-        background: linear-gradient(
-            135deg,
-            hsl(var(--uranian-blue)),
-            hsl(var(--thistle))
-        );
+        background: linear-gradient(135deg, hsl(var(--uranian-blue)), hsl(var(--thistle)));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -451,7 +422,6 @@
             0 0 15px hsl(var(--uranian-blue));
     }
 
-    /* Lazy loading optimization */
     .lazy-load {
         opacity: 0;
         transition: opacity 0.3s ease-in;
@@ -461,7 +431,6 @@
         opacity: 1;
     }
 
-    /* Fun button effects */
     .btn-magic {
         position: relative;
         overflow: hidden;
@@ -476,12 +445,7 @@
         left: -100%;
         width: 100%;
         height: 100%;
-        background: linear-gradient(
-            90deg,
-            transparent,
-            rgba(255, 255, 255, 0.4),
-            transparent
-        );
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
         transition: left 0.5s;
     }
 
@@ -494,7 +458,6 @@
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     }
 
-    /* RPG Quest Cards */
     .card-interactive {
         transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         cursor: pointer;
@@ -528,13 +491,8 @@
         transform: translateY(-5px) scale(0.98);
     }
 
-    /* MapleStory Experience Bar */
     .exp-bar {
-        background: linear-gradient(
-            90deg,
-            hsl(var(--exp-bar)) 0%,
-            hsl(var(--maple-orange)) 100%
-        );
+        background: linear-gradient(90deg, hsl(var(--exp-bar)) 0%, hsl(var(--maple-orange)) 100%);
         position: relative;
         overflow: hidden;
     }
@@ -546,30 +504,27 @@
         left: -100%;
         width: 100%;
         height: 100%;
-        background: linear-gradient(
-            90deg,
-            transparent,
-            rgba(255, 255, 255, 0.8),
-            transparent
-        );
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
         animation: expBarShine 3s infinite;
     }
 
-    /* MapleStory Skill Icons */
-    /* Skill Inventory */
     .skill-icon {
         position: relative;
         border: 2px solid hsl(var(--maple-blue));
         border-radius: 8px;
-        background: linear-gradient(
-            145deg,
-            rgba(255, 255, 255, 0.95),
-            rgba(255, 255, 255, 0.8)
-        );
+        background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.8));
         box-shadow:
             inset 0 2px 4px rgba(255, 255, 255, 0.8),
             0 4px 12px rgba(0, 0, 0, 0.2);
         color: hsl(220, 30%, 15%);
+    }
+
+    .dark .skill-icon {
+        background: linear-gradient(145deg, rgba(40, 45, 55, 0.95), rgba(35, 40, 50, 0.8));
+        box-shadow:
+            inset 0 2px 4px rgba(100, 150, 200, 0.2),
+            0 4px 12px rgba(0, 0, 0, 0.5);
+        color: hsl(210, 30%, 85%);
     }
 
     .skill-icon:hover {
@@ -580,13 +535,8 @@
             0 0 20px hsl(var(--skill-glow));
     }
 
-    /* RPG Level Display */
     .level-display {
-        background: linear-gradient(
-            145deg,
-            hsl(var(--maple-yellow)),
-            hsl(var(--maple-orange))
-        );
+        background: linear-gradient(145deg, hsl(var(--maple-yellow)), hsl(var(--maple-orange)));
         border: 3px solid hsl(var(--maple-red));
         border-radius: 50%;
         color: white;
@@ -597,7 +547,6 @@
             inset 0 2px 4px rgba(255, 255, 255, 0.4);
     }
 
-    /* Maple Leaf Decorations */
     .maple-leaf {
         color: hsl(var(--maple-red));
         filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
@@ -605,14 +554,10 @@
     }
 }
 
+/* All Keyframe Animations */
 @keyframes float {
-    0%,
-    100% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
 }
 
 @keyframes fadeUp {
@@ -641,13 +586,8 @@
 }
 
 @keyframes pulseGlow {
-    0%,
-    100% {
-        box-shadow: var(--shadow-soft);
-    }
-    50% {
-        box-shadow: var(--shadow-glow);
-    }
+    0%, 100% { box-shadow: var(--shadow-soft); }
+    50% { box-shadow: var(--shadow-glow); }
 }
 
 @keyframes slideInLeft {
@@ -673,105 +613,52 @@
 }
 
 @keyframes skillProgress {
-    from {
-        width: 0;
-    }
+    from { width: 0; }
 }
 
 @keyframes wiggle {
-    0%,
-    7% {
-        transform: rotateZ(0);
-    }
-    15% {
-        transform: rotateZ(-15deg);
-    }
-    20% {
-        transform: rotateZ(10deg);
-    }
-    25% {
-        transform: rotateZ(-10deg);
-    }
-    30% {
-        transform: rotateZ(6deg);
-    }
-    35% {
-        transform: rotateZ(-4deg);
-    }
-    40%,
-    100% {
-        transform: rotateZ(0);
-    }
+    0%, 7% { transform: rotateZ(0); }
+    15% { transform: rotateZ(-15deg); }
+    20% { transform: rotateZ(10deg); }
+    25% { transform: rotateZ(-10deg); }
+    30% { transform: rotateZ(6deg); }
+    35% { transform: rotateZ(-4deg); }
+    40%, 100% { transform: rotateZ(0); }
 }
 
 @keyframes rainbow {
-    0% {
-        filter: hue-rotate(0deg);
-    }
-    100% {
-        filter: hue-rotate(360deg);
-    }
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
 }
 
 @keyframes heartbeat {
-    0% {
-        transform: scale(1);
-    }
-    14% {
-        transform: scale(1.3);
-    }
-    28% {
-        transform: scale(1);
-    }
-    42% {
-        transform: scale(1.3);
-    }
-    70% {
-        transform: scale(1);
-    }
+    0% { transform: scale(1); }
+    14% { transform: scale(1.3); }
+    28% { transform: scale(1); }
+    42% { transform: scale(1.3); }
+    70% { transform: scale(1); }
 }
 
 @keyframes typewriter {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
+    from { width: 0; }
+    to { width: 100%; }
 }
 
 @keyframes blink {
-    0%,
-    50% {
-        opacity: 1;
-    }
-    51%,
-    100% {
-        opacity: 0;
-    }
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
 }
 
 @keyframes confetti {
-    0% {
-        transform: rotateZ(15deg) rotateY(0deg) translate(0, 0);
-    }
-    25% {
-        transform: rotateZ(5deg) rotateY(360deg) translate(-5px, 0);
-    }
-    50% {
-        transform: rotateZ(-5deg) rotateY(720deg) translate(5px, 0);
-    }
-    75% {
-        transform: rotateZ(-15deg) rotateY(1080deg) translate(-5px, 0);
-    }
-    100% {
-        transform: rotateZ(-15deg) rotateY(1440deg) translate(0, 0);
-    }
+    0% { transform: rotateZ(15deg) rotateY(0deg) translate(0, 0); }
+    25% { transform: rotateZ(5deg) rotateY(360deg) translate(-5px, 0); }
+    50% { transform: rotateZ(-5deg) rotateY(720deg) translate(5px, 0); }
+    75% { transform: rotateZ(-15deg) rotateY(1080deg) translate(-5px, 0); }
+    100% { transform: rotateZ(-15deg) rotateY(1440deg) translate(0, 0); }
 }
 
 @keyframes sparkle {
-    0%,
-    100% {
+    0%, 100% {
         opacity: 0;
         transform: scale(0);
     }
@@ -782,13 +669,8 @@
 }
 
 @keyframes morphing {
-    0%,
-    100% {
-        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    }
-    50% {
-        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
-    }
+    0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+    50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
 }
 
 @keyframes rpgGlow {
@@ -805,12 +687,8 @@
 }
 
 @keyframes expBarShine {
-    0% {
-        left: -100%;
-    }
-    100% {
-        left: 100%;
-    }
+    0% { left: -100%; }
+    100% { left: 100%; }
 }
 
 @keyframes skillGlow {
@@ -829,40 +707,16 @@
 }
 
 @keyframes leafFloat {
-    0%,
-    100% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    25% {
-        transform: translateY(-10px) rotate(5deg);
-    }
-    75% {
-        transform: translateY(5px) rotate(-5deg);
-    }
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    25% { transform: translateY(-10px) rotate(5deg); }
+    75% { transform: translateY(5px) rotate(-5deg); }
 }
 
 @keyframes gentleLeafFloat {
-    0%,
-    100% {
-        background-position:
-            0 0,
-            20px 20px;
-    }
-    25% {
-        background-position:
-            5px -5px,
-            25px 15px;
-    }
-    50% {
-        background-position:
-            10px 5px,
-            30px 25px;
-    }
-    75% {
-        background-position:
-            5px 10px,
-            25px 30px;
-    }
+    0%, 100% { background-position: 0 0, 20px 20px; }
+    25% { background-position: 5px -5px, 25px 15px; }
+    50% { background-position: 10px 5px, 30px 25px; }
+    75% { background-position: 5px 10px, 25px 30px; }
 }
 
 @keyframes questComplete {
@@ -881,19 +735,9 @@
 }
 
 @keyframes levelUp {
-    0% {
-        transform: scale(1) rotate(0deg);
-    }
-    25% {
-        transform: scale(1.1) rotate(5deg);
-    }
-    50% {
-        transform: scale(1.2) rotate(-5deg);
-    }
-    75% {
-        transform: scale(1.1) rotate(3deg);
-    }
-    100% {
-        transform: scale(1) rotate(0deg);
-    }
+    0% { transform: scale(1) rotate(0deg); }
+    25% { transform: scale(1.1) rotate(5deg); }
+    50% { transform: scale(1.2) rotate(-5deg); }
+    75% { transform: scale(1.1) rotate(3deg); }
+    100% { transform: scale(1) rotate(0deg); }
 }
