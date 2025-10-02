@@ -341,11 +341,11 @@ const About = () => {
 
                   {activeValue === index && (
                     <div className="flex justify-center items-center space-x-2 mt-3 animate-bounce">
-                      <Trophy size={16} className="text-white" />
-                      <span className="text-xs text-white font-bold">
+                      <Trophy size={16} className="text-foreground" />
+                      <span className="text-xs text-foreground font-bold">
                         MAXED SKILL!
                       </span>
-                      <Trophy size={16} className="text-white" />
+                      <Trophy size={16} className="text-foreground" />
                     </div>
                   )}
                 </div>
