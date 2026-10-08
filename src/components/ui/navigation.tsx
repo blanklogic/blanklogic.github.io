@@ -10,7 +10,7 @@ export default function Navigation() {
     <div className="shell nav-bar">
       <a href="#home" className="wordmark" aria-label="Jaymeson Koh, home" onClick={() => setOpen(false)}><span className="logo-mark">jk<span>·</span></span><span>Jaymeson Koh</span></a>
       <nav className={`nav-links ${open ? 'is-open' : ''}`} id="main-navigation" aria-label="Main navigation">{links.map(([id, label]) => <a href={`#${id}`} key={id} onClick={() => setOpen(false)}>{label}</a>)}</nav>
-      <div className="nav-actions"><ThemeToggle /><a className="resume-link" href="/JaymesonKohResume.pdf" target="_blank" rel="noreferrer">Résumé <ArrowUpRight size={16} /></a><button ref={menuButton} className="icon-button menu-toggle" onClick={() => setOpen(!open)} aria-label={open ? 'Close navigation' : 'Open navigation'} aria-expanded={open} aria-controls="main-navigation">{open ? <X size={21} /> : <Menu size={21} />}</button></div>
+      <div className="nav-actions"><ThemeToggle /><a className="resume-link" href="/Jaymeson_Koh_Resume.pdf" target="_blank" rel="noreferrer">Résumé <ArrowUpRight size={16} /></a><button ref={menuButton} className="icon-button menu-toggle" onClick={() => setOpen(!open)} aria-label={open ? 'Close navigation' : 'Open navigation'} aria-expanded={open} aria-controls="main-navigation">{open ? <X size={21} /> : <Menu size={21} />}</button></div>
     </div>
   </header>;
 }

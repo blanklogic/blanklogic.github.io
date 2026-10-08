@@ -25,7 +25,7 @@ npm run preview
 - `src/components/sections/Projects.tsx` contains the project data and conceptual illustrations. Replace illustrations with real product screenshots when available. Add project-specific links only when verified.
 - `src/index.css` contains the visual theme and responsive layouts.
 - `src/assets/` contains the original portraits.
-- `public/JaymesonKohResume.pdf` is the public résumé, with the phone number omitted.
+- `public/Jaymeson_Koh_Resume.pdf` is the public résumé, with the phone number omitted.
 - `index.html` contains search metadata, the canonical URL, fonts, and the theme initialisation.
 
 Theme preferences are saved locally. The contact link opens the visitor’s email application; the copy button copies the address. There is no message-sending backend or analytics integration.
