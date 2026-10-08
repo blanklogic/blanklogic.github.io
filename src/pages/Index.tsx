@@ -7,21 +7,6 @@ import Experience from '../components/sections/Experience';
 import Contact from '../components/sections/Contact';
 import Footer from '../components/sections/Footer';
 
-const Index = () => {
-  return (
-    <div className="min-h-screen">
-      <Navigation />
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Experience />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
-  );
-};
-
-export default Index;
+export default function Index() {
+  return <><a className="skip-link" href="#main">Skip to content</a><Navigation /><main id="main"><Hero /><Projects /><Experience /><About /><Skills /><Contact /></main><Footer /></>;
+}

@@ -3,20 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jaymeson's Portfolio</title>
-    <meta name="description" content="Portfolio of Jaymeson Koh - Full Stack Developer, Computer Science student at NUS, passionate about creating innovative user-centric technology solutions." />
+    <meta name="theme-color" content="#f7f6f2" />
+    <title>Jaymeson Koh — Software Engineer</title>
+    <meta name="description" content="Jaymeson Koh — NUS Computer Science student building full-stack products, mobile experiences, and AI tools. Open to Singapore graduate software engineering roles from May 2027." />
     <meta name="author" content="Jaymeson Koh" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <meta property="og:title" content="Jaymeson Koh - Full Stack Developer Portfolio" />
-    <meta property="og:description" content="Computer Science student and Full Stack Developer passionate about innovative technology solutions. Currently at NUS with experience in React Native, Java, TypeScript." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href="https://blanklogic.github.io/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+    <meta property="og:title" content="Jaymeson Koh — Software Engineer" />
+    <meta property="og:description" content="Curiosity in. Good software out. Full-stack, mobile, and AI projects by Jaymeson Koh, NUS Computer Science." />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://blanklogic.github.io/" />
+    <script>
+      try {
+        const theme = localStorage.getItem('theme');
+        document.documentElement.classList.toggle('dark', theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches));
+      } catch (_) {}
+    </script>
   </head>
-
   <body>
     <div id="root"></div>
+    <noscript>Please enable JavaScript to view this portfolio. You can contact Jaymeson at tellmindblank@gmail.com or <a href="/JaymesonKohResume.pdf">read his résumé</a>.</noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

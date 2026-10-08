@@ -1,73 +1,43 @@
-# Welcome to your Lovable project
+# Jaymeson Koh — Portfolio
 
-## Project info
+Personal portfolio for [blanklogic.github.io](https://blanklogic.github.io), built with React, TypeScript, and Vite. The site includes responsive layouts, light and dark themes, project filters, résumé access, and direct email contact.
 
-**URL**: https://lovable.dev/projects/fbba70a3-de59-4918-9c87-b594131f3128
+## Local development
 
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/fbba70a3-de59-4918-9c87-b594131f3128) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Use Node.js 22.12+ or a newer supported LTS version (verified with Node 24). The older Node 20.5 installation on this computer is incompatible with Vite 7.
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+npm ci
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The development preview runs at `http://127.0.0.1:8080`.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```sh
+npm run build
+npx tsc -p tsconfig.app.json --noEmit
+npm run preview
+```
 
-**Use GitHub Codespaces**
+## Editing content
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- `src/components/sections/` contains the hero, projects, experience, about, skills, contact, and footer sections.
+- `src/components/sections/Projects.tsx` contains the project data and conceptual illustrations. Replace illustrations with real product screenshots when available. Add project-specific links only when verified.
+- `src/index.css` contains the visual theme and responsive layouts.
+- `src/assets/` contains the original portraits.
+- `public/JaymesonKohResume.pdf` is the public résumé, with the phone number omitted.
+- `index.html` contains search metadata, the canonical URL, fonts, and the theme initialisation.
 
-## What technologies are used for this project?
+Theme preferences are saved locally. The contact link opens the visitor’s email application; the copy button copies the address. There is no message-sending backend or analytics integration.
 
-This project is built with:
+## GitHub Pages
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+The existing `.github/workflows/deploy.yml` builds and deploys `dist` when changes are pushed to `main`, or when the workflow is run manually. Keep the repository’s Pages source set to **GitHub Actions**. The site is configured for the root domain `https://blanklogic.github.io/`.
 
-## How can I deploy this project?
+To publish this redesign, review the local changes, commit them, and push to `main`. Check the deployment result in GitHub Actions before treating the redesign as live. Local edits and builds do not change the public site.
 
-Simply open [Lovable](https://lovable.dev/projects/fbba70a3-de59-4918-9c87-b594131f3128) and click on Share -> Publish.
+## Checks performed for the redesign
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- Production build and TypeScript checks.
+- ESLint on the changed application files.
+- Browser checks for desktop and mobile layouts, project filtering, navigation, theme persistence, and email-copy feedback.
