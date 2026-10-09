@@ -25,7 +25,6 @@ npm run preview
 - `src/components/sections/Projects.tsx` contains the project data and conceptual illustrations. Replace illustrations with real product screenshots when available. Add project-specific links only when verified.
 - `src/index.css` contains the visual theme and responsive layouts.
 - `src/assets/` contains the original portraits.
-- `public/Jaymeson_Koh_Resume.pdf` is the public résumé, with the phone number omitted.
 - `index.html` contains search metadata, the canonical URL, fonts, and the theme initialisation.
 
 Theme preferences are saved locally. The contact link opens the visitor’s email application; the copy button copies the address. There is no message-sending backend or analytics integration.
@@ -41,3 +40,9 @@ To publish this redesign, review the local changes, commit them, and push to `ma
 - Production build and TypeScript checks.
 - ESLint on the changed application files.
 - Browser checks for desktop and mobile layouts, project filtering, navigation, theme persistence, and email-copy feedback.
+
+## Dependency maintenance
+
+Use npm and the committed `package-lock.json`; the obsolete Bun lockfile has been removed. Run `npm ci` for reproducible installs and `npm audit` to check production and development dependencies.
+
+The security update migrates React Router to v7 and Tailwind CSS to v4, using `@tailwindcss/postcss`. The existing Tailwind theme is loaded through `@config` in `src/index.css`. Tailwind v4 targets Safari 16.4+, Chrome 111+, and Firefox 128+.
